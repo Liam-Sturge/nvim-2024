@@ -11,6 +11,9 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
+          "bashls",
+          "dockerls",
+          "pyright",
         }
       })
     end
@@ -19,7 +22,10 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
+      lspconfig.bashls.setup({})
       lspconfig.lua_ls.setup({})
+      lspconfig.pyright.setup({})
+      lspconfig.dockerls.setup({})
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('UserLspConfig', {}),
         callback = function(ev)
