@@ -8,6 +8,7 @@ local options = {
   fileencoding = "utf-8",                  -- the encoding written to a file
   hlsearch = true,                         -- highlight all matches on previous search pattern
   ignorecase = true,                       -- ignore case in search patterns
+  inccommand = "split",
   mouse = "a",                             -- allow the mouse to be used in neovim
   pumheight = 10,                          -- pop up menu height
   scroll = 10,                             -- number of lines to jump up/down with <C-u>/<C-d> {default 30}
