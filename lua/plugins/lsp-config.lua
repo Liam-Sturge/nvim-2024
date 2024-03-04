@@ -11,6 +11,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
+          "ansiblels",
           "bashls",
           "dockerls",
           "pyright",
@@ -22,6 +23,7 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
+      lspconfig.ansiblels.setup({})
       lspconfig.bashls.setup({})
       lspconfig.lua_ls.setup({})
       lspconfig.pyright.setup({})
